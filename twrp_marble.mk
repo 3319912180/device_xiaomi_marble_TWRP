@@ -19,8 +19,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 23049RAD8C
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := marble, marblein
+
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center
