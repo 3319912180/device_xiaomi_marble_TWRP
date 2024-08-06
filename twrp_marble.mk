@@ -1,5 +1,5 @@
 #
-# Copyright 2017 The Android Open Source Project
+# Copyright（C）2019 The TwrpBuilder Open_Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,31 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-#
-# Only the below variable(s) need to be changed!
-#
 
-# Define hardware platform
-PRODUCT_RELEASE_NAME := marble
+DEVICE_PATH :=device/xiaomi/marble
 
-# Device path for OEM device tree
-DEVICE_PATH := device/xiaomi/$(PRODUCT_RELEASE_NAME)
-
-# Inherit from hardware-specific part of the product configuration
+#Inherit from device.mk configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
-# Inherit any OrangeFox-specific settings
-$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
-
-# Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
-
+#Release name
+PRODUCT_RELEASE_NAME :=marble
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
-PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
-PRODUCT_BRAND := xiaomi
-PRODUCT_MODEL := xiaomi marble
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_DEVICE := marble
+PRODUCT_NAME := twrp_marble
+PRODUCT_BRAND := POCO
+PRODUCT_MODEL := F5
+PRODUCT_MANUFACTURER := Xiaomi
 
-#
+# assert
+TARGET_OTA_ASSERT_DEVICE := marble, marble
