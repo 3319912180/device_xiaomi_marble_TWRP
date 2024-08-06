@@ -3,7 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
+TARGE_SKIP_OTA_PACKAGE := true
 # Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
